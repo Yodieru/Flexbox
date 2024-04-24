@@ -9,9 +9,19 @@
     font-family: 'Times New Roman', Times, serif;
  }
  
- .contanier {
+ .contanier {  
+    /* display: flex; Ajusta el "ancho" al espacio disponible */
+    /* display: inline-flex; Ajusta el "ancho" al espacio de los contenidos */
+
     background-color: deepskyblue;
+ 
     display: flex;
+
+    /* flex-direction: row; Valor por default. Direccion Main Axis -> izq a der*/
+    /* flex-direction: row-reverse; Direccion Main Axis <- der a izq*/
+    
+    /* flex-direction: column; Cambia la direccion del main Axis de arriba a abajo */
+    /* flex-direction: column-reverse; Cambia la direccion del main Axis de abajo a arriba */
  }
  
  .item {
@@ -24,3 +34,4 @@
     padding-top: 32px;
     border: 1px solid red;
  }
+
