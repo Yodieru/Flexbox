@@ -10,23 +10,42 @@
  }
  
  .contanier {  
-    /* display: flex; Ajusta el "ancho" al espacio disponible */
-    /* display: inline-flex; Ajusta el "ancho" al espacio de los contenidos */
+
+
+   /* display: flex; Ajusta el "ancho" al espacio disponible */
+   /* display: inline-flex; Ajusta el "ancho" al espacio de los contenidos */
+    
+   /* justify-content: start; Valor por default. Alinea a la izquierda*/
+   /* justify-content: end; Alinea los items a la derecha */
+    justify-content: center; /*Alinea los items al centro */
+   /* justify-content: space-around; Distribuye el espacio a los costados cada item */
+   /* justify-content: space-between; Distribuye el espacio entre los elemento */
+   /* justify-content: space-evenly; Distribuye el espacio entre los elementos y el contenedor */
+    
+   /* flex-direction: row; Valor por default. Direccion Main Axis -> izq a der*/
+    flex-direction: row-reverse;/* Direccion Main Axis <- der a izq*/
+   /* flex-direction: column; Cambia la direccion del main Axis de arriba a abajo */
+   /* flex-direction: column-reverse; Cambia la direccion del main Axis de abajo a arriba */
+
+   height: 500px; /* Damos altura para probar align-items */
+    /* align-items: flex-start; Alinea hacia arriba */
+    /* align-items: flex-end; Alinea hacia abajo */
+    align-items: center; /* Alinea al centro */
+    /* align-items: stretch; Crece en la altura los elementos en espacio disponible. Los items no deben tener alto definido */
+    /* align-items: baseline; Alinea los items en funcion de la linea base del texto que contienen. Independientemente del tamaño del texto, ubicacion del contenido y altura del item */
 
     background-color: deepskyblue;
  
     display: flex;
 
-    /* flex-direction: row; Valor por default. Direccion Main Axis -> izq a der*/
-    /* flex-direction: row-reverse; Direccion Main Axis <- der a izq*/
     
-    /* flex-direction: column; Cambia la direccion del main Axis de arriba a abajo */
-    /* flex-direction: column-reverse; Cambia la direccion del main Axis de abajo a arriba */
  }
  
  .item {
+
+
     width: 100px;
-    height: 100px;
+    height: 100px; 
     background-color: goldenrod;
     text-align: center;
     font-size: 24px;
@@ -34,4 +53,34 @@
     padding-top: 32px;
     border: 1px solid red;
  }
+
+   /* Vamos a usar pseudoclases para seleccionar los items individualmente */
+   
+/*    .item:nth-child(1) {
+      background-color: crimson;
+      font-size: 10px;
+      padding-top: 80px;
+      height: 350px;
+   }
+
+   .item:nth-child(2) {
+      background-color: darkorange;
+      font-size: 30px;
+      padding-top: 20px;
+      height: 600px;
+   }
+
+   .item:nth-child(3) {
+      background-color: deeppink;
+      font-size: 78px;
+      padding-top: 120px;
+      height: 400px;
+   }
+
+   .item:nth-child(4) {
+      background-color: chocolate;
+      font-size: 50px;
+      padding-top: 200px;
+      height: 800px;
+   } */
 
