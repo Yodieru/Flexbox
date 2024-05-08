@@ -17,22 +17,42 @@
     
    /* justify-content: start; Valor por default. Alinea a la izquierda*/
    /* justify-content: end; Alinea los items a la derecha */
-    justify-content: center; /*Alinea los items al centro */
+   /* justify-content: center; Alinea los items al centro */
    /* justify-content: space-around; Distribuye el espacio a los costados cada item */
    /* justify-content: space-between; Distribuye el espacio entre los elemento */
    /* justify-content: space-evenly; Distribuye el espacio entre los elementos y el contenedor */
     
    /* flex-direction: row; Valor por default. Direccion Main Axis -> izq a der*/
-    flex-direction: row-reverse;/* Direccion Main Axis <- der a izq*/
+   /* flex-direction: row-reverse; Direccion Main Axis <- der a izq*/
    /* flex-direction: column; Cambia la direccion del main Axis de arriba a abajo */
    /* flex-direction: column-reverse; Cambia la direccion del main Axis de abajo a arriba */
 
-   height: 500px; /* Damos altura para probar align-items */
-    /* align-items: flex-start; Alinea hacia arriba */
-    /* align-items: flex-end; Alinea hacia abajo */
-    align-items: center; /* Alinea al centro */
-    /* align-items: stretch; Crece en la altura los elementos en espacio disponible. Los items no deben tener alto definido */
-    /* align-items: baseline; Alinea los items en funcion de la linea base del texto que contienen. Independientemente del tamaño del texto, ubicacion del contenido y altura del item */
+   /* height: 500px;  Damos altura para probar align-items */
+   /* align-items: flex-start; Alinea hacia arriba */
+   /* align-items: flex-end; Alinea hacia abajo */
+   /* align-items: center;  Alinea al centro */
+   /* align-items: stretch; Crece en la altura los elementos en espacio disponible. Los items no deben tener alto definido */
+   /* align-items: baseline; Alinea los items en funcion de la linea base del texto que contienen. Independientemente del tamaño del texto, ubicacion del contenido y altura del item */
+   
+    width: 350px;
+
+    height: 500px;
+
+    flex-wrap: nowrap; /* Valor por default. Esto hace que los items se ajusten al espacio disponible, sin dar salto de linea */
+
+    flex-wrap: wrap; /* Esto dara saltas de linea en los items cuando no qepan en el espacio disponible. Si el contenedor no tiene al definido, se ajustara automaticamente */
+
+   /* Align content -> Esta propiedad trabaja cuando hay multiples lineas*/
+
+   /* align-content: normal; Valor por defaut */
+   align-content: flex-start; /*  Ajusta las lineas al inicio del eje transversal. Alinea hacia arriba */
+    /*align-content: flex-end; Ajusta las lineas al final del eje transversal. Alinea hacia abajo */
+   align-content: center; /* Ahusta las lineas al centro del eje transversal. Alineando al centro */
+    /*align-content: space-around;  Distribuye el espacio al rededor de las lineas (arriba y abajo) */
+   align-content: space-between; /* Fsitribuye el espacio entre las . Sin conciderar el contenedor */
+   /*align-content: space-evenly; Distrubuye el espacio proporcionalmente entrelas linea y el contenedor */
+   /* align-content: stretch;   Va a crecer la altura de los items en el espacio disponible del eje transversal */
+   justify-content: space-between;
 
     background-color: deepskyblue;
  
@@ -45,7 +65,7 @@
 
 
     width: 100px;
-    height: 100px; 
+    height: 100px;  
     background-color: goldenrod;
     text-align: center;
     font-size: 24px;
@@ -54,7 +74,7 @@
     border: 1px solid red;
  }
 
-   /* Vamos a usar pseudoclases para seleccionar los items individualmente */
+/* Vamos a usar seudoclases para seleccionar los items individualmente */
    
 /*    .item:nth-child(1) {
       background-color: crimson;
@@ -83,4 +103,3 @@
       padding-top: 200px;
       height: 800px;
    } */
-
