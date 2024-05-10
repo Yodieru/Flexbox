@@ -11,32 +11,44 @@
  
  .contanier {  
     background-color: deepskyblue;
-    flex-direction: row; /* Este es el valor por defaut */
-    flex-direction: column; /* Cambia la direccion del eje original */
     display: flex;
  }
- 
- /* 
- Propieades de flexbox para los items
- 
- + Flex-basis -> Tamaño del main-size del elemento. Es como un ´width´ ancho base del elemento. 
- 
-   Cuando flex-direction: row / row-reverse -> flex-basis = ancho
-   Cuando flex-direction: column / column-reverse -> flex-basis = alto
-
-   Flex-basis es relativa al espacio disponible del contenerdor. Si no hay espacio suficiente los eementos no creceran mas alla.
-
-   si tengo flex-basis declarado el width/height no funciona, de acuerdo al contexto de direccion del eje principal. 
-*/
-
+   /* 
+      Propiedades de Flexbox para Items.
+      
+      + Flex-grow -> Esta propiedad ajuste el factor de crecimiento de los elementos en funcion el espacio disponible. El valor por defaut es ´auto´.
+      
+      Esta propiedad recibe valres numericos: 1, 2, 3, 4... El numero que coloquemos es el factor de crecimiento,*/
  .item {
-    flex-basis: 100px;
+    flex-grow: auto; /* Este es el valor por defaut */
+    flex-grow: 2; /* Va hacer que todos los items crescran con el mismo factor */
+
     width: 200px;
     background-color: goldenrod;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     border: 1px solid red;
+ }
+
+ .a {
+   flex-grow: 10;
+   background-color: coral;
+ }
+
+ .b {
+    flex-grow: 6;
+    background-color: cornflowerblue;
+ }
+
+ .c {
+    flex-grow: 3; /* El item con esta clase, crece con el factor de 2 */
+    background-color: crimson;
+ }
+
+ .d {
+    flex-grow: 1;
+    background-color: darkgoldenrod;
  }
 
     
