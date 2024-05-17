@@ -9,46 +9,33 @@
     font-family: 'Times New Roman', Times, serif;
  }
  
- .contanier {  
-    background-color: deepskyblue;
-    display: flex;
- }
-   /* 
-      Propiedades de Flexbox para Items.
-      
-      + Flex-grow -> Esta propiedad ajuste el factor de crecimiento de los elementos en funcion el espacio disponible. El valor por defaut es ´auto´.
-      
-      Esta propiedad recibe valres numericos: 1, 2, 3, 4... El numero que coloquemos es el factor de crecimiento,*/
- .item {
-    flex-grow: auto; /* Este es el valor por defaut */
-    flex-grow: 2; /* Va hacer que todos los items crescran con el mismo factor */
+ /* Gab -> Espacio entre los elementos.
 
-    width: 200px;
+    Recibe valores en numeros con unidades relativas o absolutas.
+
+    Esta propiedad se pasa al contenedor */
+
+ .contanier {  
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    /*gap: 24px;  Espacio entre los elementos */
+    /*gap: 3rem;  Unidades sabsolutas: px o relativas: em o rem */
+    column-gap: 24px; /* Espacio entre los elementos en la vaertical */
+    row-gap: 32px; /* Espacio entre los elementos en la horizontal */
+    gap: 10px 32px; /* Con dos valores, el primero es para espacio horizontal y el segundo con el espacio vertical */
+    background-color: deepskyblue;
+ }
+
+ .item {
+    width: 100px;
+    height: 100px;
+
     background-color: goldenrod;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     border: 1px solid red;
- }
-
- .a {
-   flex-grow: 10;
-   background-color: coral;
- }
-
- .b {
-    flex-grow: 6;
-    background-color: cornflowerblue;
- }
-
- .c {
-    flex-grow: 3; /* El item con esta clase, crece con el factor de 2 */
-    background-color: crimson;
- }
-
- .d {
-    flex-grow: 1;
-    background-color: darkgoldenrod;
  }
 
     
