@@ -9,21 +9,23 @@
     font-family: 'Times New Roman', Times, serif;
  }
  
- /* Gab -> Espacio entre los elementos.
-
-    Recibe valores en numeros con unidades relativas o absolutas.
-
-    Esta propiedad se pasa al contenedor */
+ /* 
+   Aling-self -> Se pasa a uno o varios elementos en particular.
+   
+   Va a alinear en el eje transversal a ese elemento unicamente. Y sobre escribe la propiedad de alig-items y su valor si ha declarado en el contenedor
+    
+   Recibe los mismos valores que aling-items: 
+   
+   star, end, center, strecth, baseline*/
 
  .contanier {  
-    width: 500px;
+    height: 600px;
     display: flex;
-    flex-wrap: wrap;
-    /*gap: 24px;  Espacio entre los elementos */
-    /*gap: 3rem;  Unidades sabsolutas: px o relativas: em o rem */
-    column-gap: 24px; /* Espacio entre los elementos en la vaertical */
-    row-gap: 32px; /* Espacio entre los elementos en la horizontal */
-    gap: 10px 32px; /* Con dos valores, el primero es para espacio horizontal y el segundo con el espacio vertical */
+    align-items: center;
+    justify-content: space-between;
+
+
+    display: flex;
     background-color: deepskyblue;
  }
 
@@ -36,6 +38,11 @@
     font-size: 24px;
     font-weight: bold;
     border: 1px solid red;
+ }
+
+ .solito {
+   align-self: flex-end;
+   /* height: auto; */
  }
 
     
